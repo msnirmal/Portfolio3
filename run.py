@@ -52,8 +52,23 @@ def check_answer():
         return 0
 
 
-def show_score():
-    pass
+def show_score(score, guesses):
+    print("-------------------------")
+    print("RESULTS")
+    print("-------------------------")
+
+    print("Answers: ", end="")
+    for i in questions:
+        print(questions.get(i), end="")
+    print()
+
+    print("Guesses: ", end = "")
+    for i in guesses:
+        print(i, end=" ")
+    print()
+    
+    score = int((correct_guesses/len(questions))*100)
+    print("Your score is: "+str(score)+"%")
 
 
 def play_again():
