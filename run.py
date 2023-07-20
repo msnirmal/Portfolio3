@@ -1,3 +1,5 @@
+import os
+
 questions = {
  "What do elephants use their trunk for?: ": "D",
  "What element does the chemical symbol Au stand for?: ": "D",
@@ -22,6 +24,14 @@ options = [["A. Smell", "B. Carry food", "C. Communication", "D. All of the abov
           ["A. Elephant","B. Tiger", "C. Lion", "D. Panda"],
           ["A. Eagle","B. Pigeon", "C. Peacock", "D. Rooster"]]
 
+player_name = input ("Please enter your name: \n")
+print("\n")
+print(f"Welcome {player_name}!! lets play the quiz")
+print("\n")
+os.system('cls' if os.name == 'nt' else 'clear')
+print ("Here are your questions, wish you all the best")
+
+
 def start_game():
 
     guesses= []
@@ -39,17 +49,16 @@ def start_game():
         correct_guesses += check_answer(questions.get(key), guess)
         question_index += 1    
     show_score(correct_guesses, guesses)
-
+     
 
 def check_answer(answer, guess):
 
     if answer == guess:
-        print ('CORRECT')
+        print ("CORRECT")
         return 1
     else:
-        print ('INCORRECT')
+        print ("INCORRECT")
         return 0
-
 
 def show_score(correct_guesses, guesses):
     print("-------------------------")
@@ -85,7 +94,10 @@ start_game()
 while play_again():
     start_game()
 
-start_game()
+ 
+
+
+ 
  
 
 
