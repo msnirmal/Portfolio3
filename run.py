@@ -12,12 +12,29 @@ options = [["A. Guido van Rossum", "B. Elon Musk", "C. Bill Gates", "D. Mark Zuc
 
 def start_game():
 
+    guesses[]
+    score = 0
+    question_index = 0
+
+    for key in questions:
+        print()
+        print(key)
+        for i in options[question_index]:
+            print(i)
+        guess = input("Enter (A, B, C, or D): ")
+        guess = guess.upper()
+        guesses.append(guess)
+        score += check_answer(questions.get(key), guess)
+        question_index += 1
+    
+    show_score(score, guesses)
+
 
 def check_answer():
 
 
 def show_score():
-    
+
 
 def play_again()
 
