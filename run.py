@@ -4,7 +4,7 @@ questions = {
  "What is the most visited tourist attraction in the world?: ": "A",
  "What is the only food that cannot go bad?: ": "D",
  "Who invented the gramophone?: ": "B",
- "What is the world’s smallest bird?: ": "D",
+ "What is the world’s smallest bird?: ": "C",
  "What is the capital city of India?: ": "B",
  "Who founded Amazon?: ": "C",
  "What animal features in the logo for the World Wildlife Fund?: ": "D",
@@ -20,29 +20,28 @@ options = [["A. Smell", "B. Carry food", "C. Communication", "D. All of the abov
           ["A. Bangalore","B. Delhi", "C. Chennai", "D. Kerala"],
           ["A. Elon Musk","B. Richard Branson", "C. Jeff Bezos", "D. Narayan Murthy"],
           ["A. Elephant","B. Tiger", "C. Lion", "D. Panda"],
-          ["A. Elephant","B. Tiger", "C. Lion", "D. Panda"],
           ["A. Eagle","B. Pigeon", "C. Peacock", "D. Rooster"]]
 
 def start_game():
 
     guesses= []
-    score = 0
-    question_index = 0
+    correct_guesses = 0
+    question_index = 1
 
     for key in questions:
         print()
         print(key)
-        for i in options[question_index]:
+        for i in options[question_index-1]:
             print(i)
         guess = input("Enter (A, B, C, or D): ")
         guess = guess.upper()
         guesses.append(guess)
-        score += check_answer(questions.get(key), guess)
+        correct_guesses += check_answer(questions.get(key), guess)
         question_index += 1    
-    show_score(score, guesses)
+    show_score(correct_guesses, guesses)
 
 
-def check_answer():
+def check_answer(answer, guess):
 
     if answer == guess:
         print ('CORRECT')
@@ -52,14 +51,14 @@ def check_answer():
         return 0
 
 
-def show_score(score, guesses):
+def show_score(correct_guesses, guesses):
     print("-------------------------")
     print("RESULTS")
     print("-------------------------")
 
-    print("Answers: ", end="")
+    print("Answers: ", end= "")
     for i in questions:
-        print(questions.get(i), end="")
+        print(questions.get(i), end=" ")
     print()
 
     print("Guesses: ", end = "")
@@ -72,7 +71,20 @@ def show_score(score, guesses):
 
 
 def play_again():
-    pass
+    
+    response = input("Do you want to play again? (yes or no): ")
+    response = response.upper()
+
+    if response == "Yes":
+        return True
+    else:
+        return False
+    
+start_game()
+
+while play_again():
+    start_game()
+
 start_game()
  
 
