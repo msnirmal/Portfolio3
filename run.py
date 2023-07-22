@@ -26,13 +26,13 @@ def clear():
 
 print("GENERAL KNOWLEDGE QUIZ")
 print("\n")
-time.sleep(2)
-player_name = input ("Please enter your name or just press enter key: \n")
-time.sleep(3)
+time.sleep(1)
+player_name = input ("Please enter your name or just press enter key: \n").capitalize()
+time.sleep(1)
 clear()
-print(f"Welcome {player_name}!! lets play the quiz")
+print(f"Welcome {player_name}, lets play :-)")
 time.sleep(3)
-clear()
+print("\n")
 print ("Here are your questions, wish you all the best....")
 time.sleep(3)
 clear()
@@ -52,7 +52,7 @@ def initiate_game():
         guesses.append(guess)
 
         correct_guesses += check_answer(questions.get(key), guess)
-        time.sleep(3)
+        time.sleep(2)
         clear()
         question_num += 1
 
@@ -108,6 +108,7 @@ while play_again():
     initiate_game()
 
 print("Thank you for playing the quiz game")
+quit()
 
  
 
