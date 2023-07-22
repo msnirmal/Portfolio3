@@ -38,11 +38,11 @@ This website is made up of the following sections:
 
 3.	As a first-time visitor, I want to be able to test my knowledge and see how i have performed 
 
-4.	As a first-time visitor, i want the quiz to be self explanatory, rather than having to go through multiple paragraphs of instructions and buttons leading to various other pages and finding my way back
+4.	As a first-time visitor, i want the quiz to be self explanatory, rather than having to go through multiple paragraphs of instructions and options to select leading to various other pages and finding my way back
 
 5.	As a first time, i want the quiz to prompt if i am correct or incorrect 
 
-6. As a first time visitor, i want to be able to easily reload the quiz when it has ended or i want to intentionaly pause and launch from the beginning 
+6. As a first time visitor, i want to be able to play the game again 
 
 ## **UX**
 ---
@@ -50,38 +50,20 @@ This website is made up of the following sections:
 
 To be in line with UX principles, first i thought  of a strategy to identify who the target users would be and what features they are looking for 
 
-Animal quiz target users are:
+General knowledge quiz target users are:
 * Aged 15 & over (Can be under 15's with parental permission to use electronics)
-* Animal lovers 
-* People who have passion for nature and its creation  
+* quiz lovers 
+* People who are on the quest for knowledge
 
 User requirements:
-* Website that's simple and meets the purpose
-* Ease of navigation  
+* Terminal program with no style and design 
 * Basic content for the understanding of kids under 15
-* To be able to view on all devices 
-
-### **Scope**
-
-* Title header which is self explanatory and navigation links to access various sections of the page 
-* Stunning Images of animals in their natural habitat
-* Submit button that doesn't allow you click more than once to basically test your knowledge
-* Next button to sail through the various questions with ease 
-* Reload button to relaunch the quiz once complete, to try again 
-* Simple and easy to understand text that states the score out of total questions 
-* Interactive result text, which pops whether correct or incorrect  
+ 
 
 ### **Structure**
 
-This is a single page website that includes quiz area, inside which there's quiz images, input text box, submit button, next button and reload button, sections to show score and result. 
+Quiz structure has various loops and functions in the backend and all that the user would see is a text input section to enter their name, once done a welcome message followed by questions, options and a text input for their guesses, which would then be validated with correct answers and result displayed as correct or incorrect. End of the quiz would be a scoreboard section to show the user of the guesses they made against the correct answers and their score in percentage
 
-### **Skeletal**
-
-While creating a draft for this website and during the building process, i used different background colors, however, i felt the images that i have used will contrast well with a white background for quiz area and rest of body has yellow to contrast with the neon blue buttons. Also, i have used font Vollkorn for header and Poppins for the text content in quiz area with default browser font for button 
-
-### **Surface**
-
-The overall background of this website is Yellow with white background for quiz area, keeping in mind the colors of the images and the button colors i have used 
 
 ## **Features**
 ---
