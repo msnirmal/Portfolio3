@@ -16,12 +16,26 @@ options = [["A. Smell", "B. Carry food", "C. Communication", "D. All of the abov
           ["A. Thomas Edison","B. Emile Berliner", "C. Albert Einstein", "D. Isaac Newton"],
           ]
 
-player_name = input ("Please enter your name: \n")
+
+def clear():
+    if os.name == 'nt':
+        os.system('cls')
+     
+    else:
+        os.system('clear')
+
+print("GENERAL KNOWLEDGE QUIZ")
+print("\n")
+time.sleep(2)
+player_name = input ("Please enter your name or just press enter key: \n")
 time.sleep(3)
+clear()
 print(f"Welcome {player_name}!! lets play the quiz")
 time.sleep(3)
+clear()
 print ("Here are your questions, wish you all the best....")
-time.sleep(5)
+time.sleep(3)
+clear()
 
 def initiate_game():
 
@@ -30,7 +44,6 @@ def initiate_game():
     question_num = 1 
 
     for key in questions:
-        print("-------------------------")
         print(key)
         for i in options[question_num-1]:
             print(i)
@@ -39,23 +52,30 @@ def initiate_game():
         guesses.append(guess)
 
         correct_guesses += check_answer(questions.get(key), guess)
+        time.sleep(3)
+        clear()
         question_num += 1
 
     show_score(correct_guesses, guesses)
+    
 
 def check_answer(answer, guess):  
 
     if answer == guess:
-        print("CORRECT!")
+        print("\n")
+        print("Yayy that's CORRECT!")
         return 1
+         
     else:
-        print("INCORRECT!")
-        return 0
+        print("\n")
+        print("Oops that's INCORRECT!")
+        return 0         
+
 
 def show_score(correct_guesses, guesses):
-    print("*************************")
-    print("RESULTS")
-    print("*************************")
+    print("****************************************************************************************")
+    print("Thanks for playing, please see below your guesses against correct answers and your score")
+    print("****************************************************************************************")
 
     print("Correct Answers: ", end="")
     for i in questions:
@@ -76,6 +96,8 @@ def play_again():
     response = response.upper()
 
     if response == "YES":
+        time.sleep(2)
+        clear()
         return True
     else:
         return False
@@ -83,7 +105,7 @@ def play_again():
 initiate_game()    
 
 while play_again():
-    new_game()
+    initiate_game()
 
 print("Thank you for playing the quiz game")
 
