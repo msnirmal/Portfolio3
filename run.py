@@ -1,4 +1,5 @@
 import os
+import time
 
 questions = {
  "What do elephants use their trunk for?: ": "D",
@@ -16,74 +17,75 @@ options = [["A. Smell", "B. Carry food", "C. Communication", "D. All of the abov
           ]
 
 player_name = input ("Please enter your name: \n")
-print("\n")
+time.sleep(3)
 print(f"Welcome {player_name}!! lets play the quiz")
-print("\n")
-os.system('cls' if os.name == 'nt' else 'clear')
-print ("Here are your questions, wish you all the best")
+time.sleep(3)
+print ("Here are your questions, wish you all the best....")
+time.sleep(5)
 
+def initiate_game():
 
-def start_game():
-
-    guesses= []
+    guesses = []
     correct_guesses = 0
-    question_index = 1
+    question_num = 1 
 
     for key in questions:
-        print()
+        print("-------------------------")
         print(key)
-        for i in options[question_index-1]:
+        for i in options[question_num-1]:
             print(i)
         guess = input("Enter (A, B, C, or D): ")
         guess = guess.upper()
         guesses.append(guess)
-        correct_guesses += check_answer(questions.get(key), guess)
-        question_index += 1    
-    show_score(correct_guesses, guesses)
-     
 
-def check_answer(answer, guess):
+        correct_guesses += check_answer(questions.get(key), guess)
+        question_num += 1
+
+    show_score(correct_guesses, guesses)
+
+def check_answer(answer, guess):  
 
     if answer == guess:
-        print ("CORRECT")
+        print("CORRECT!")
         return 1
     else:
-        print ("INCORRECT")
+        print("INCORRECT!")
         return 0
 
 def show_score(correct_guesses, guesses):
-    print("-------------------------")
+    print("*************************")
     print("RESULTS")
-    print("-------------------------")
+    print("*************************")
 
-    print("Answers: ", end= "")
+    print("Correct Answers: ", end="")
     for i in questions:
         print(questions.get(i), end=" ")
     print()
 
-    print("Guesses: ", end = "")
+    print("Your Guesses: ", end="")
     for i in guesses:
         print(i, end=" ")
     print()
-    
-    score = int((correct_guesses/len(questions))*100)
-    print("Your score is: "+str(score)+"%")
 
+    score = int((correct_guesses/len(questions))*100)
+    print("You have scored: "+str(score)+"%")
 
 def play_again():
-    
+
     response = input("Do you want to play again? (yes or no): ")
     response = response.upper()
 
-    if response == "Yes":
+    if response == "YES":
         return True
     else:
         return False
-    
-start_game()
+
+initiate_game()    
 
 while play_again():
-    start_game()
+    new_game()
+
+print("Thank you for playing the quiz game")
 
  
 
