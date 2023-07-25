@@ -2,6 +2,7 @@
 
 [Visit the website here] (https://gkquizportfolio3-e2c5424addcd.herokuapp.com/)
 
+![](readme_images/responsive.JPG)
 
 
 This terminal based program is created for quiz lovers and is for users 15 and above, however, under 15's can still use with parental guidance and permission to use electronics 
@@ -95,9 +96,16 @@ This program is designed with an intent to encourage users to test their knowled
 
 The technologies i have used to create this website are as below-
 
-- [python] (https://www.python.org/)
+- [python](https://www.python.org/)
+  - Used as the main programming language 
 - [GitHub](https://github.com/)
+   - Used to store code for the project after being pushed.
 - [Gitpod](https://www.gitpod.io/)
+   - Used as the development environment.
+- [codeanywhere](https://codeanywhere.com/)
+   - Used as the development environment.
+- [Heroku](https://heroku.com/) 
+   - Used for deployment
     
 
     ## Testing 
@@ -124,6 +132,18 @@ The quiz does prompt if the answer is correct or incorrect as you progress throu
 6. **As a first time visitor, i want to be able to play the game again**
 
 The progrm includes a function to play again, which prompts the user if they wish to play again or end the quiz
+
+## Bugs
+
+* The user name input was originally accepting letters, numbers and special characters. Have fixed that to ensure the user can only enter letters 
+
+* User guess input accepts other alphabets, including the allowed A, B, C & D. Working to fix this and will be sorted in next build 
+
+## Python code Validation 
+
+ I have validated my python code using CI python linter and found no errors but warnings, which i would be fixing. Please see below 
+
+ ![](readme_images/python_validation.JPG)
 
    
 ## Deployment
@@ -196,7 +216,7 @@ The website was deployed to Heroku using the following steps:
 
 Have used various sources to arrive at the idea of designing the quiz
 
-- You Tube Videos (for the logic)
+- You Tube Videos 
 - Stackoverflow (for setting a criteria of accepting alphabets only for user name)
 - Peer Projects 
 - Love Sandwiches walk through 
