@@ -24,8 +24,7 @@ options = [["A. Smell", "B. Carry food", "C. Communication",
 def clear():
     """
     Function to clear screen
-    """  
-     
+    """       
     if os.name == 'nt':
         os.system('cls')     
     else:
@@ -47,10 +46,9 @@ def initiate_game():
         print()                      
         if not player_name.isalpha():
             print("INVALID ENTRY")
-            print("(* Name should include ONLY letters)")
-            print("(* Numbers/ Special characters/ Alphanumeric etc not allowed)")
-            print()
-        
+            print("Name should include ONLY letters")
+            print("Numbers/ Special characters/ Alphanumeric etc not allowed")
+            print()        
         else:            
             print(f"Welcome {player_name}, lets play :-)")
             time.sleep(3)

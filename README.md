@@ -1,6 +1,6 @@
 # **General Knowledge Quiz**
 
-[Visit the website here] (https://gkquizportfolio3-e2c5424addcd.herokuapp.com/)
+[Visit the website here](https://gkquizportfolio3-e2c5424addcd.herokuapp.com/)
 
 ![](readme_images/responsive.JPG)
 
