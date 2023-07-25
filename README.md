@@ -1,4 +1,4 @@
-# **General Knowledge**
+# **General Knowledge Quiz**
 
 
 
@@ -8,7 +8,7 @@ This terminal based program is created for quiz lovers and is for users 15 and a
 
 This website is made up of the following sections:
 
-1. Header
+1. Heading
 2. User Name input 
 3. Welcome screen
 4. Questions 
@@ -117,3 +117,67 @@ The progrm includes a function to play again, which prompts the user if they wis
    
 ## Deployment
 ---
+
+The website was deployed to Heroku using the following steps:
+
+### Login or create an account at Heroku
+
+ * Sign up for an account in Heroku and login
+ 
+### Creating an app
+
+* Create new app in the top right of the screen and add an app name 
+* Select region
+* Click "create app".
+ 
+
+### Open settings Tab
+
+### Click on Reveal Config Vars
+
+* Store CREDS file from Codeanywhere in key and add the values
+* Store PORT in key and value
+ 
+
+### Add Buildpacks
+
+* From the settings tab find the 'Add buildpack' button
+* Add python buildpack first
+* Add Nodejs buildpack after that
+ 
+### Click Deploy Tab
+
+### Choose deployment method
+
+* Connect GitHub
+* Login if prompted
+ 
+### Connect to GitHub
+
+* Choose repositories you want to connect
+* Click "Connect"
+ 
+### Automatic and Manual deploy
+
+* Choose a method to deploy
+* After Deploy is clicked it will install various files
+ 
+### Final Deployment
+
+* Click the view link to diplay the deployed website 
+ 
+### Forking the GitHub Repository
+
+* Go to the GitHub repository
+* Click on Fork button in top right corner
+* You will then have a copy of the repository in your own GitHub account.
+* GitHub Repository
+
+### Cloning the repository in GitHub
+* Visit the GitHub page of the website's repository
+* Click the “Clone” button on top of the page
+* Click on “HTTPS”
+* Click on the copy button next to the link to copy it
+* Open your IDE
+* Type git clone (copied URL)   into the terminal
+
