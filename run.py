@@ -22,6 +22,10 @@ options = [["A. Smell", "B. Carry food", "C. Communication",
 
 
 def clear():
+    """
+    Function to clear screen
+    """  
+     
     if os.name == 'nt':
         os.system('cls')     
     else:
@@ -29,6 +33,12 @@ def clear():
 
 
 def initiate_game():
+    """
+    function to initiate the quiz game 
+    input for user name and logic set to accept letters only 
+    display question, options and text input for user choices    
+    increment questions with relevant options 
+    """
     print("GENERAL KNOWLEDGE QUIZ")
     print()
     time.sleep(1)
@@ -69,18 +79,27 @@ def initiate_game():
 
 
 def check_answer(answer, guess):  
+    """
+    function to validate user answer against correct answer
+    display correct or incorrect 
+    """
 
     if answer == guess:
-        print("\n")
-        print("Yayy that's CORRECT!")
+        print()
+        print("CORRECT :-)")
         return 1         
     else:
-        print("\n")
-        print("Oops that's INCORRECT!")
+        print()
+        print("INCORRECT :-(")
         return 0         
 
 
 def show_score(correct_guesses, guesses):
+    """
+    function to display result 
+    display user guesses versus correct answers 
+    display score 
+    """
     print("********************************************************")
     print("See below your guesses against correct answers and score")
     print("********************************************************")
@@ -100,6 +119,9 @@ def show_score(correct_guesses, guesses):
 
 
 def play_again():
+    """
+    function to display message to play again or quit the game 
+    """
 
     response = input("Do you want to play again? (yes or no): ")
     response = response.upper()
@@ -117,5 +139,5 @@ initiate_game()
 while play_again():
     initiate_game()
 
-print("Thank you for playing the quiz game")
+print("Thank you for playing the quiz game!!")
 quit()
