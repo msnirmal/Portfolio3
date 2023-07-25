@@ -1,6 +1,6 @@
 # **General Knowledge Quiz**
 
-[GKQuiz] (https://gkquizportfolio3-e2c5424addcd.herokuapp.com/)
+[Visit the website here] (https://gkquizportfolio3-e2c5424addcd.herokuapp.com/)
 
 
 
@@ -72,14 +72,23 @@ This program is designed with an intent to encourage users to test their knowled
 
 ### *Heading* 
 
-
+![](readme_images/heading.JPG)
  
 
 ### *Text input for username *
 
+![](readme_images/usernameinput.JPG)
+
 ### *Question and Options*
 
 ### *Text input for user guesses*
+
+![](readme_images/user_input.JPG)
+
+### Results page 
+
+![](readme_images/results_page.JPG)
+
 
 
 ## Technologies Used 
