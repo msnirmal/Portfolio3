@@ -28,21 +28,27 @@ def clear():
         os.system('clear')
 
 
-print("GENERAL KNOWLEDGE QUIZ")
-print("\n")
-time.sleep(1)
-player_name = input("Enter your name or press 'enter' key:\n").capitalize()
-time.sleep(1)
-clear()
-print(f"Welcome {player_name}, lets play :-)")
-time.sleep(3)
-print("\n")
-print("Here are your questions, wish you all the best....")
-time.sleep(3)
-clear()
-
-
 def initiate_game():
+    print("GENERAL KNOWLEDGE QUIZ")
+    print()
+    time.sleep(1)
+    while True:
+        player_name = input("Please enter your name:\n").capitalize()           
+        print()                      
+        if not player_name.isalpha():
+            print("INVALID ENTRY")
+            print("(* Name should include ONLY letters)")
+            print("(* Numbers/ Special characters/ Alphanumeric etc not allowed)")
+            print()
+        
+        else:            
+            print(f"Welcome {player_name}, lets play :-)")
+            time.sleep(3)
+            print()
+            print("Here are your questions, wish you all the best!!")
+            time.sleep(3)
+            clear()
+            break
 
     guesses = []
     correct_guesses = 0

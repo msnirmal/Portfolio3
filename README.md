@@ -1,6 +1,6 @@
 # **General Knowledge Quiz**
 
-
+[GKQuiz] (https://gkquizportfolio3-e2c5424addcd.herokuapp.com/)
 
 
 
@@ -71,6 +71,8 @@ Quiz structure has various loops and functions in the backend and all that the u
 This program is designed with an intent to encourage users to test their knowledge, easy to use and meant for purpose with no overwhelming information. 
 
 ### *Heading* 
+
+
  
 
 ### *Text input for username *
@@ -180,4 +182,18 @@ The website was deployed to Heroku using the following steps:
 * Click on the copy button next to the link to copy it
 * Open your IDE
 * Type git clone (copied URL)   into the terminal
+
+## Credits 
+
+Have used various sources to arrive at the idea of designing the quiz
+
+- You Tube Videos (for the logic)
+- Stackoverflow (for setting a criteria of accepting alphabets only for user name)
+- Peer Projects 
+- Love Sandwiches walk through 
+
+## Acknowledgements 
+
+Thanks to my mentor Harry Dhillon for all the inputs to fine tune the project 
+
 
